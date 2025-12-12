@@ -32,10 +32,8 @@ sudo snap install terraform --classic
 terraform init
 terraform apply -var-file examples/tfvars.json -auto-approve
 
-# configure kubeflow-spark-setup
+# Switch to the kubeflow Juju model
 juju switch kubeflow
-juju config dex-auth static-username=admin
-juju config dex-auth static-password=admin
 
-# output kubeflow UI address
+# Output kubeflow UI address
 microk8s kubectl -n kubeflow get svc istio-ingressgateway-workload -o jsonpath='{.status.loadBalancer.ingress[0].ip}'
