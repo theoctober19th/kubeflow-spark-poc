@@ -1,0 +1,7 @@
+job_queue: luma 
+provision_data:
+  distro: noble
+reserve_data:
+  ssh_keys:
+    - lp:theoctober19th # make sure to update with your launchpad credentials!
+  timeout: 21600
